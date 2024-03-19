@@ -2,7 +2,7 @@
 //Route     /diary/my
 //Accses    Private
 const myDiary = (req, res) => {
-	res.render('my-diary');
+	res.render('diary/my-diary');
 };
 
 module.exports = {
