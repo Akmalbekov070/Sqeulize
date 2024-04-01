@@ -1,15 +1,25 @@
 const { Sequelize, DataTypes } = require('sequelize');
 const sequelize = require('../config/db');
 
-const Diary = sequelize.define('diary', {
-	id: {
-		type: DataTypes.INTEGER,
-		auttoIcrement: true,
-		allowNull: false,
-		primaryKey: true,
+const Diary = sequelize.define(
+	'diary',
+	{
+		id: {
+			type: DataTypes.INTEGER,
+			auttoIcrement: true,
+			allowNull: false,
+			primaryKey: true,
+		},
+		text: {
+			type: DataTypes.STRING(500),
+			allowNull: false,
+		},
+		imageUrl: {
+			type: DataTypes.STRING(1000),
+			allowNull: true,
+		},
 	},
-	text: {
-		type: DataTypes.STRING(500),
-		allowNull: false,
-	},
-});
+	{
+		timestamps: true,
+	}
+);
