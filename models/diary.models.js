@@ -8,4 +8,8 @@ const Diary = sequelize.define('diary', {
 		allowNull: false,
 		primaryKey: true,
 	},
+	text: {
+		type: DataTypes.STRING(500),
+		allowNull: false,
+	},
 });
