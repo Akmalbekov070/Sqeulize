@@ -23,3 +23,4 @@ const Diary = sequelize.define(
 		timestamps: true,
 	}
 );
+module.exports = Diary;
