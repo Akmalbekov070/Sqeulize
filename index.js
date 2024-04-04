@@ -2,7 +2,7 @@ const express = require('express');
 const dotenv = require('dotenv');
 const exphbs = require('express-handlebars');
 const app = express();
-const sequelize = require('./config/db');
+const db = require('./models/index');
 //initial vareables
 dotenv.config();
 
@@ -16,7 +16,7 @@ app.use('/diary', require('./routes/diary.route'));
 const PORT = process.env.PORT || 3000;
 const start = async () => {
 	try {
-		const connect = await sequelize.sync();
+		const connect = await db.sequelize.sync();
 		console.log(connect);
 		app.listen(PORT, () => {
 			console.log(`Server running on port ${PORT}`);
