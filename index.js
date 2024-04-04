@@ -2,6 +2,7 @@ const express = require('express');
 const dotenv = require('dotenv');
 const exphbs = require('express-handlebars');
 const app = express();
+const sequelize = require('./config/db');
 //initial vareables
 dotenv.config();
 
