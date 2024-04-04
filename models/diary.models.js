@@ -3,17 +3,17 @@ module.exports = (sequelize, Sequelize) => {
 		'diary',
 		{
 			id: {
-				type: DataTypes.INTEGER,
+				type: Sequelize.INTEGER,
 				auttoIcrement: true,
 				allowNull: false,
 				primaryKey: true,
 			},
 			text: {
-				type: DataTypes.STRING(500),
+				type: Sequelize.STRING(500),
 				allowNull: false,
 			},
 			imageUrl: {
-				type: DataTypes.STRING(1000),
+				type: Sequelize.STRING(1000),
 				allowNull: true,
 			},
 		},
