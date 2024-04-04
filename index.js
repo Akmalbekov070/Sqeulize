@@ -14,7 +14,15 @@ app.set('view engine', '.hbs');
 app.use('/diary', require('./routes/diary.route'));
 
 const PORT = process.env.PORT || 3000;
-
-app.listen(PORT, () => {
-	console.log(`Server running on port ${PORT}`);
-});
+const start = async () => {
+	try {
+		const connect = await sequelize.sync();
+		console.log(connect);
+		app.listen(PORT, () => {
+			console.log(`Server running on port ${PORT}`);
+		});
+	} catch (err) {
+		console.log(err);
+	}
+};
+start();
