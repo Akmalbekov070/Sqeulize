@@ -1,6 +1,6 @@
 module.exports = (sequelize, Sequelize) => {
 	const Diary = sequelize.define(
-		'myDiary',
+		'Diary',
 		{
 			id: {
 				type: Sequelize.INTEGER,
