@@ -8,6 +8,12 @@ dotenv.config();
 
 ///
 app.use(express.json());
+//enctype
+app.use(
+	express.urlencoded({
+		extended: false,
+	})
+);
 
 //initialize templete (handlebars)
 app.engine('.hbs', exphbs.engine({ extname: 'hbs' }));
