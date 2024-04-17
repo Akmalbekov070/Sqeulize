@@ -7,7 +7,7 @@ const db = require('./models/index');
 dotenv.config();
 
 ///
-app.use(express.json());
+// app.use(express.json());
 //enctype
 app.use(
 	express.urlencoded({

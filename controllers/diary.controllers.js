@@ -12,12 +12,13 @@ const myDiary = (req, res) => {
 //Accses    Private
 const addMyDiary = async (req, res) => {
 	try {
-		const { text, imageUrl } = req.body;
+		const { id, text, imageUrl } = req.body;
+		console.log(req.body.id);
 		await Diary.create({
+			id: id,
 			imageUrl: imageUrl,
 			text: text,
 		});
-
 		res.redirect('/diary/my');
 	} catch (error) {
 		console.log(error);

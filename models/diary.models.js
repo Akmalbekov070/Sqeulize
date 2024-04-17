@@ -1,11 +1,11 @@
 module.exports = (sequelize, Sequelize) => {
 	const Diary = sequelize.define(
-		'Diary',
+		'diary',
 		{
 			id: {
 				type: Sequelize.INTEGER,
 				auttoIcrement: true,
-				allowNull: true,
+				allowNull: false,
 				primaryKey: true,
 			},
 			text: {
