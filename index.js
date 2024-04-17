@@ -6,6 +6,9 @@ const db = require('./models/index');
 //initial vareables
 dotenv.config();
 
+///
+app.use(express.json());
+
 //initialize templete (handlebars)
 app.engine('.hbs', exphbs.engine({ extname: 'hbs' }));
 app.set('view engine', '.hbs');
