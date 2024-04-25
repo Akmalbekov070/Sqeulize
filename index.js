@@ -11,7 +11,7 @@ dotenv.config();
 //enctype
 app.use(
 	express.urlencoded({
-		extended: false,
+		extended: true,
 	})
 );
 

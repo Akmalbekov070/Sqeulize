@@ -1,5 +1,5 @@
 const db = require('../models/index');
-const Diary = db.diary;
+const diary = db.diary;
 //Desc      get all myDiary page
 //Route     get/diary/my
 //Accses    Private
@@ -12,11 +12,9 @@ const myDiary = (req, res) => {
 //Accses    Private
 const addMyDiary = async (req, res) => {
 	try {
-		const { id, text, imageUrl } = req.body;
-		console.log(req.body.id);
-		await Diary.create({
-			id: id,
-			imageUrl: imageUrl,
+		const { text, ImageUrl } = req.body;
+		await diary.create({
+			ImageUrl: ImageUrl,
 			text: text,
 		});
 		res.redirect('/diary/my');
