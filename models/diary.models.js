@@ -8,13 +8,13 @@ module.exports = (sequelize, Sequelize) => {
 				allowNull: true,
 				primaryKey: true,
 			},
+			imageUrl: {
+				type: Sequelize.STRING(1000),
+				allowNull: true,
+			},
 			text: {
 				type: Sequelize.STRING(500),
 				allowNull: false,
-			},
-			ImageUrl: {
-				type: Sequelize.STRING(1000),
-				allowNull: true,
 			},
 		},
 		{
